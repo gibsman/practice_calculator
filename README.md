@@ -1,2 +1,2 @@
 # practice_calculator
-Repository for practice OMGTU
+Repository for practice OMGTu
