@@ -71,6 +71,7 @@
             this.Addition.TabIndex = 3;
             this.Addition.Text = "+";
             this.Addition.UseVisualStyleBackColor = true;
+            this.Addition.Click += new System.EventHandler(this.Addition_Click);
             // 
             // Substraction
             // 
@@ -80,7 +81,7 @@
             this.Substraction.TabIndex = 4;
             this.Substraction.Text = "-";
             this.Substraction.UseVisualStyleBackColor = true;
-            this.Substraction.Click += new System.EventHandler(this.button2_Click);
+            this.Substraction.Click += new System.EventHandler(this.Substraction_Click);
             // 
             // Multiplication
             // 
@@ -90,6 +91,7 @@
             this.Multiplication.TabIndex = 5;
             this.Multiplication.Text = "*";
             this.Multiplication.UseVisualStyleBackColor = true;
+            this.Multiplication.Click += new System.EventHandler(this.Multiplication_Click);
             // 
             // Division
             // 
@@ -99,6 +101,7 @@
             this.Division.TabIndex = 6;
             this.Division.Text = "/";
             this.Division.UseVisualStyleBackColor = true;
+            this.Division.Click += new System.EventHandler(this.Division_Click);
             // 
             // label1
             // 
@@ -135,12 +138,13 @@
             this.reset.TabIndex = 10;
             this.reset.Text = "Reset";
             this.reset.UseVisualStyleBackColor = true;
+            this.reset.Click += new System.EventHandler(this.reset_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(281, 385);
+            this.ClientSize = new System.Drawing.Size(281, 380);
             this.Controls.Add(this.reset);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
