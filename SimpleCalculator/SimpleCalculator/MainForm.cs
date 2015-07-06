@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SimpleCalculator
@@ -17,88 +10,81 @@ namespace SimpleCalculator
             InitializeComponent();
         }
 
-        bool TextCheck(string text)
-        {
-            char[] symbol = Text.ToCharArray();
-            for (int i = 0; i < text.Length; i++)
-            {
-                if (symbol[i] < '0' || symbol[i] > '9')
-                    return false;
-            }
-            return true;
-
-        }
-
         private void Operations(object sender, EventArgs e)
         {
             double result;
-            bool DivisionCheck = false;
-            if (TextCheck(FirstArgument.Text) == true || TextCheck(SecondArgument.Text) == true)
+            if (String.IsNullOrEmpty(FirstArgument.Text) || String.IsNullOrEmpty(SecondArgument.Text))
             {
-                if (String.IsNullOrEmpty(FirstArgument.Text) || String.IsNullOrEmpty(SecondArgument.Text))
-                    Result.Text = "Enter arguments";
-                else
-                {
-                    switch (((Button) sender).Name)
+                throw new Exception("Enter arguments");
+            }
+            double FirstValue = Convert.ToDouble(FirstArgument.Text);
+            double SecondValue = Convert.ToDouble(SecondArgument.Text);
+            switch (((Button)sender).Name)
+            {
+                case "Division":
                     {
-                        case "Division":
+                        if (SecondValue == 0)
                         {
-                            if (Convert.ToDouble(SecondArgument.Text) == 0)
-                            {
-                                Result.Text = "Error. Division by zero";
-                                DivisionCheck = true;
-                                result = 0;
-                            }
-                            else
-                            {
-                                result = Convert.ToDouble(FirstArgument.Text)/Convert.ToDouble(SecondArgument.Text);
-                            }
-                            break;
+                            throw new Exception("Division by zero");
                         }
-                        case "Addition":
-                        {
-                            result = Convert.ToDouble(FirstArgument.Text) + Convert.ToDouble(SecondArgument.Text);
-                            break;
-                        }
-                        case "Multiplication":
-                        {
-                            result = Convert.ToDouble(FirstArgument.Text)*Convert.ToDouble(SecondArgument.Text);
-                            break;
-                        }
-                        case "Substraction":
-                        {
-                            result = Convert.ToDouble(FirstArgument.Text) - Convert.ToDouble(SecondArgument.Text);
-                            break;
-                        }
-                        default:
-                            throw new Exception("Error");
-
+                        result = FirstValue / SecondValue;
+                        break;
                     }
-                    if (DivisionCheck == false)
-                        Result.Text = result.ToString();
-                }
+                case "Addition":
+                    {
+                        result = FirstValue + SecondValue;
+                        break;
+                    }
+                case "Multiplication":
+                    {
+                        result = FirstValue * SecondValue;
+                        break;
+                    }
+                case "Substraction":
+                    {
+                        result = FirstValue - SecondValue;
+                        break;
+                    }
+                default:
+                    throw new Exception("Error");
             }
-            else
-            {
-                Result.Text = "Enter numbers";
-            }
+            Result.Text = result.ToString();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+
+
+        private void MainFormLoad(object sender, EventArgs e)
         {
 
         }
-       
-        private void reset_Click(object sender, EventArgs e)
+
+        private void resetClick(object sender, EventArgs e)
         {
             FirstArgument.Text = "";
             SecondArgument.Text = "";
             Result.Text = "";
         }
 
-        private void Result_TextChanged(object sender, EventArgs e)
+        private void ResultTextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void FirstArgumentKeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar))
+            {
+
+            }
+            else
+                if (e.KeyChar == ',' || e.KeyChar == '.')
+                {
+
+                }
+                else
+                {
+                    e.Handled = e.KeyChar != (char)Keys.Back;
+                }
         }
 
 
