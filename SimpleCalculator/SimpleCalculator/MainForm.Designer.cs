@@ -35,32 +35,37 @@
             this.Substraction = new System.Windows.Forms.Button();
             this.Multiplication = new System.Windows.Forms.Button();
             this.Division = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.reset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // FirstArgument
             // 
-            this.FirstArgument.Location = new System.Drawing.Point(13, 13);
+            this.FirstArgument.BackColor = System.Drawing.SystemColors.Window;
+            this.FirstArgument.Location = new System.Drawing.Point(12, 26);
             this.FirstArgument.Name = "FirstArgument";
             this.FirstArgument.Size = new System.Drawing.Size(215, 20);
             this.FirstArgument.TabIndex = 0;
             // 
             // SecondArgument
             // 
-            this.SecondArgument.Location = new System.Drawing.Point(13, 52);
+            this.SecondArgument.Location = new System.Drawing.Point(12, 75);
             this.SecondArgument.Name = "SecondArgument";
             this.SecondArgument.Size = new System.Drawing.Size(215, 20);
             this.SecondArgument.TabIndex = 1;
             // 
             // Result
             // 
-            this.Result.Location = new System.Drawing.Point(13, 92);
+            this.Result.Location = new System.Drawing.Point(12, 125);
             this.Result.Name = "Result";
             this.Result.Size = new System.Drawing.Size(215, 20);
             this.Result.TabIndex = 2;
             // 
             // Addition
             // 
-            this.Addition.Location = new System.Drawing.Point(13, 137);
+            this.Addition.Location = new System.Drawing.Point(12, 151);
             this.Addition.Name = "Addition";
             this.Addition.Size = new System.Drawing.Size(60, 42);
             this.Addition.TabIndex = 3;
@@ -69,7 +74,7 @@
             // 
             // Substraction
             // 
-            this.Substraction.Location = new System.Drawing.Point(79, 137);
+            this.Substraction.Location = new System.Drawing.Point(79, 151);
             this.Substraction.Name = "Substraction";
             this.Substraction.Size = new System.Drawing.Size(60, 42);
             this.Substraction.TabIndex = 4;
@@ -79,7 +84,7 @@
             // 
             // Multiplication
             // 
-            this.Multiplication.Location = new System.Drawing.Point(145, 137);
+            this.Multiplication.Location = new System.Drawing.Point(145, 151);
             this.Multiplication.Name = "Multiplication";
             this.Multiplication.Size = new System.Drawing.Size(60, 42);
             this.Multiplication.TabIndex = 5;
@@ -88,18 +93,58 @@
             // 
             // Division
             // 
-            this.Division.Location = new System.Drawing.Point(211, 137);
+            this.Division.Location = new System.Drawing.Point(211, 151);
             this.Division.Name = "Division";
             this.Division.Size = new System.Drawing.Size(60, 42);
             this.Division.TabIndex = 6;
             this.Division.Text = "/";
             this.Division.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "First argument";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Second argument";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 109);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Result";
+            // 
+            // reset
+            // 
+            this.reset.Location = new System.Drawing.Point(10, 199);
+            this.reset.Name = "reset";
+            this.reset.Size = new System.Drawing.Size(259, 46);
+            this.reset.TabIndex = 10;
+            this.reset.Text = "Reset";
+            this.reset.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(279, 261);
+            this.ClientSize = new System.Drawing.Size(281, 385);
+            this.Controls.Add(this.reset);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Division);
             this.Controls.Add(this.Multiplication);
             this.Controls.Add(this.Substraction);
@@ -107,8 +152,14 @@
             this.Controls.Add(this.Result);
             this.Controls.Add(this.SecondArgument);
             this.Controls.Add(this.FirstArgument);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximumSize = new System.Drawing.Size(297, 419);
+            this.MinimumSize = new System.Drawing.Size(297, 419);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Simple calculator";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,6 +174,10 @@
         private System.Windows.Forms.Button Substraction;
         private System.Windows.Forms.Button Multiplication;
         private System.Windows.Forms.Button Division;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button reset;
 
     }
 }
