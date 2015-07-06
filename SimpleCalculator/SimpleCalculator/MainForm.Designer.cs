@@ -60,18 +60,21 @@
             // 
             this.Result.Location = new System.Drawing.Point(12, 125);
             this.Result.Name = "Result";
+            this.Result.ReadOnly = true;
             this.Result.Size = new System.Drawing.Size(215, 20);
             this.Result.TabIndex = 2;
+            this.Result.TextChanged += new System.EventHandler(this.Result_TextChanged);
             // 
             // Addition
             // 
+            this.Addition.BackColor = System.Drawing.SystemColors.Control;
             this.Addition.Location = new System.Drawing.Point(12, 151);
             this.Addition.Name = "Addition";
             this.Addition.Size = new System.Drawing.Size(60, 42);
             this.Addition.TabIndex = 3;
             this.Addition.Text = "+";
-            this.Addition.UseVisualStyleBackColor = true;
-            this.Addition.Click += new System.EventHandler(this.Addition_Click);
+            this.Addition.UseVisualStyleBackColor = false;
+            this.Addition.Click += new System.EventHandler(this.Operations);
             // 
             // Substraction
             // 
@@ -81,7 +84,7 @@
             this.Substraction.TabIndex = 4;
             this.Substraction.Text = "-";
             this.Substraction.UseVisualStyleBackColor = true;
-            this.Substraction.Click += new System.EventHandler(this.Substraction_Click);
+            this.Substraction.Click += new System.EventHandler(this.Operations);
             // 
             // Multiplication
             // 
@@ -91,7 +94,7 @@
             this.Multiplication.TabIndex = 5;
             this.Multiplication.Text = "*";
             this.Multiplication.UseVisualStyleBackColor = true;
-            this.Multiplication.Click += new System.EventHandler(this.Multiplication_Click);
+            this.Multiplication.Click += new System.EventHandler(this.Operations);
             // 
             // Division
             // 
@@ -101,7 +104,7 @@
             this.Division.TabIndex = 6;
             this.Division.Text = "/";
             this.Division.UseVisualStyleBackColor = true;
-            this.Division.Click += new System.EventHandler(this.Division_Click);
+            this.Division.Click += new System.EventHandler(this.Operations);
             // 
             // label1
             // 
@@ -144,7 +147,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(281, 380);
+            this.ClientSize = new System.Drawing.Size(281, 286);
             this.Controls.Add(this.reset);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -157,8 +160,8 @@
             this.Controls.Add(this.SecondArgument);
             this.Controls.Add(this.FirstArgument);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.MaximumSize = new System.Drawing.Size(297, 419);
-            this.MinimumSize = new System.Drawing.Size(297, 419);
+            this.MaximumSize = new System.Drawing.Size(297, 320);
+            this.MinimumSize = new System.Drawing.Size(297, 320);
             this.Name = "MainForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
