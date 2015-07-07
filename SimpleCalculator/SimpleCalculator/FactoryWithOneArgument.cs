@@ -10,7 +10,11 @@ namespace SimpleCalculator
             {
                 case "Sin": return new Sin();
                 case "Squared": return new Squared();
-                default:throw new Exception("Unknow error!");
+                case "Lg":return new Lg();
+                case "Ln":return new Ln();
+                case "Cos":return new Cos();
+                case "Sqrt":return new Sqrt();
+                default:throw new Exception("Unknown error!");
             }
         }
 

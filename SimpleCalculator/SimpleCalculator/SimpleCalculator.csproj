@@ -45,10 +45,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Add.cs" />
+    <Compile Include="Cos.cs" />
     <Compile Include="Divide.cs" />
     <Compile Include="FactoryWithOneArgument.cs" />
     <Compile Include="FactoryWithTwoArguments.cs" />
     <Compile Include="IOperationWithTwoArguments.cs" />
+    <Compile Include="Lg.cs" />
+    <Compile Include="Ln.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +63,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sin.cs" />
+    <Compile Include="Sqrt.cs" />
     <Compile Include="Squared.cs" />
     <Compile Include="Substract.cs" />
     <EmbeddedResource Include="MainForm.resx">

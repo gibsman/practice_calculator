@@ -46,7 +46,7 @@ namespace SimpleCalculator
             this.reset = new System.Windows.Forms.Button();
             this.Sin = new System.Windows.Forms.Button();
             this.Squared = new System.Windows.Forms.Button();
-            this.sqrt = new System.Windows.Forms.Button();
+            this.Sqrt = new System.Windows.Forms.Button();
             this.Lg = new System.Windows.Forms.Button();
             this.Ln = new System.Windows.Forms.Button();
             this.Cos = new System.Windows.Forms.Button();
@@ -177,16 +177,16 @@ namespace SimpleCalculator
             this.Squared.UseVisualStyleBackColor = true;
             this.Squared.Click += new System.EventHandler(this.OperationsWithOneArgument);
             // 
-            // sqrt
+            // Sqrt
             // 
-            this.sqrt.BackColor = System.Drawing.SystemColors.Control;
-            this.sqrt.Location = new System.Drawing.Point(77, 299);
-            this.sqrt.Name = "sqrt";
-            this.sqrt.Size = new System.Drawing.Size(60, 42);
-            this.sqrt.TabIndex = 13;
-            this.sqrt.Text = "sqrt";
-            this.sqrt.UseVisualStyleBackColor = true;
-            this.sqrt.Click += new System.EventHandler(this.OperationsWithOneArgument);
+            this.Sqrt.BackColor = System.Drawing.SystemColors.Control;
+            this.Sqrt.Location = new System.Drawing.Point(77, 299);
+            this.Sqrt.Name = "Sqrt";
+            this.Sqrt.Size = new System.Drawing.Size(60, 42);
+            this.Sqrt.TabIndex = 13;
+            this.Sqrt.Text = "Sqrt";
+            this.Sqrt.UseVisualStyleBackColor = true;
+            this.Sqrt.Click += new System.EventHandler(this.OperationsWithOneArgument);
             // 
             // Lg
             // 
@@ -227,7 +227,7 @@ namespace SimpleCalculator
             this.Controls.Add(this.Cos);
             this.Controls.Add(this.Ln);
             this.Controls.Add(this.Lg);
-            this.Controls.Add(this.sqrt);
+            this.Controls.Add(this.Sqrt);
             this.Controls.Add(this.Squared);
             this.Controls.Add(this.Sin);
             this.Controls.Add(this.reset);
@@ -267,7 +267,7 @@ namespace SimpleCalculator
         private Button reset;
         private Button Sin;
         private Button Squared;
-        private Button sqrt;
+        private Button Sqrt;
         private Button Lg;
         private Button Ln;
         private Button Cos;
