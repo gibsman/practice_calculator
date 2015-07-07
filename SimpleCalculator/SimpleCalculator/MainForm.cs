@@ -21,7 +21,7 @@ namespace SimpleCalculator
             double firstValue = Convert.ToDouble(FirstArgument.Text);
             double secondValue = Convert.ToDouble(SecondArgument.Text);
             string nameButton = ((Button) sender).Name;
-            IOperationWithTwoArguments factory = FactoryWithTwoArguments.Calculate(nameButton);
+            IOperationWithTwoArguments factory = FactoryWithTwoArguments.GetCalculator(nameButton);
             Result.Text = factory.Calculate(firstValue,secondValue).ToString();
         }
 
@@ -68,7 +68,7 @@ namespace SimpleCalculator
             double result;
             double firstValue = Convert.ToDouble(FirstArgument.Text);
             string nameButton = ((Button)sender).Name;
-            IOperationWithOneArgument factory = FactoryWithOneArgument.Calculate(nameButton);
+            IOperationWithOneArgument factory = FactoryWithOneArgument.GetCalculator(nameButton);
             Result.Text = factory.Calculate(firstValue).ToString();
         }
 

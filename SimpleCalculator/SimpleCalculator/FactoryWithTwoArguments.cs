@@ -4,7 +4,7 @@ namespace SimpleCalculator
 {
     public static class FactoryWithTwoArguments
     {
-        public static IOperationWithTwoArguments Calculate(string operation)
+        public static IOperationWithTwoArguments GetCalculator(string operation)
         {
             switch (operation)
             {
