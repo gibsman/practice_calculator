@@ -1,12 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SimpleCalculator
 {
-    class Sin
+    public class Sin
     {
+        public double SinOperation(double argument)
+        {
+            return Math.Sin(argument);
+        }
     }
 }
