@@ -32,8 +32,8 @@ namespace SimpleCalculator
                         break;
                     }
                 case "Addition":
-                {
-                    result=Add1.Calculate(firstValue, secondValue);
+                    {
+                        result = Add1.Calculate(firstValue, secondValue);
                         break;
                     }
                 case "Multiplication":
@@ -101,6 +101,26 @@ namespace SimpleCalculator
                         result = Math.Sin(firstValue);
                         break;
                     }
+                case "Cos":
+                    {
+                        result = Math.Cos(firstValue);
+                        break;
+                    }
+                case "Ln":
+                    {
+                        result = Math.Log(firstValue);
+                        break;
+                    }
+                case "Lg":
+                    {
+                        result = Math.Log10(firstValue);
+                        break;
+                    }
+                case "sqrt":
+                    {
+                        result = Math.Sqrt(firstValue);
+                        break;
+                    }
                 case "Squared":
                     {
                         result = Math.Pow(firstValue, 2);
@@ -111,6 +131,7 @@ namespace SimpleCalculator
             }
             Result.Text = result.ToString();
         }
+
 
 
 

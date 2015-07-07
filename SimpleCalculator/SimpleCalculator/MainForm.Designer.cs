@@ -46,6 +46,10 @@ namespace SimpleCalculator
             this.reset = new System.Windows.Forms.Button();
             this.Sin = new System.Windows.Forms.Button();
             this.Squared = new System.Windows.Forms.Button();
+            this.sqrt = new System.Windows.Forms.Button();
+            this.Lg = new System.Windows.Forms.Button();
+            this.Ln = new System.Windows.Forms.Button();
+            this.Cos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // FirstArgument
@@ -165,7 +169,7 @@ namespace SimpleCalculator
             // Squared
             // 
             this.Squared.BackColor = System.Drawing.SystemColors.Control;
-            this.Squared.Location = new System.Drawing.Point(78, 251);
+            this.Squared.Location = new System.Drawing.Point(12, 299);
             this.Squared.Name = "Squared";
             this.Squared.Size = new System.Drawing.Size(60, 42);
             this.Squared.TabIndex = 12;
@@ -173,9 +177,57 @@ namespace SimpleCalculator
             this.Squared.UseVisualStyleBackColor = true;
             this.Squared.Click += new System.EventHandler(this.OperationsWithOneArgument);
             // 
+            // sqrt
+            // 
+            this.sqrt.BackColor = System.Drawing.SystemColors.Control;
+            this.sqrt.Location = new System.Drawing.Point(77, 299);
+            this.sqrt.Name = "sqrt";
+            this.sqrt.Size = new System.Drawing.Size(60, 42);
+            this.sqrt.TabIndex = 13;
+            this.sqrt.Text = "sqrt";
+            this.sqrt.UseVisualStyleBackColor = true;
+            this.sqrt.Click += new System.EventHandler(this.OperationsWithOneArgument);
+            // 
+            // Lg
+            // 
+            this.Lg.BackColor = System.Drawing.SystemColors.Control;
+            this.Lg.Location = new System.Drawing.Point(209, 251);
+            this.Lg.Name = "Lg";
+            this.Lg.Size = new System.Drawing.Size(60, 42);
+            this.Lg.TabIndex = 14;
+            this.Lg.Text = "Lg";
+            this.Lg.UseVisualStyleBackColor = true;
+            this.Lg.Click += new System.EventHandler(this.OperationsWithOneArgument);
+            // 
+            // Ln
+            // 
+            this.Ln.BackColor = System.Drawing.SystemColors.Control;
+            this.Ln.Location = new System.Drawing.Point(143, 251);
+            this.Ln.Name = "Ln";
+            this.Ln.Size = new System.Drawing.Size(60, 42);
+            this.Ln.TabIndex = 15;
+            this.Ln.Text = "Ln";
+            this.Ln.UseVisualStyleBackColor = true;
+            this.Ln.Click += new System.EventHandler(this.OperationsWithOneArgument);
+            // 
+            // Cos
+            // 
+            this.Cos.BackColor = System.Drawing.SystemColors.Control;
+            this.Cos.Location = new System.Drawing.Point(77, 251);
+            this.Cos.Name = "Cos";
+            this.Cos.Size = new System.Drawing.Size(60, 42);
+            this.Cos.TabIndex = 16;
+            this.Cos.Text = "Cos";
+            this.Cos.UseVisualStyleBackColor = true;
+            this.Cos.Click += new System.EventHandler(this.OperationsWithOneArgument);
+            // 
             // MainForm
             // 
-            this.ClientSize = new System.Drawing.Size(281, 311);
+            this.ClientSize = new System.Drawing.Size(281, 382);
+            this.Controls.Add(this.Cos);
+            this.Controls.Add(this.Ln);
+            this.Controls.Add(this.Lg);
+            this.Controls.Add(this.sqrt);
             this.Controls.Add(this.Squared);
             this.Controls.Add(this.Sin);
             this.Controls.Add(this.reset);
@@ -189,8 +241,8 @@ namespace SimpleCalculator
             this.Controls.Add(this.Result);
             this.Controls.Add(this.SecondArgument);
             this.Controls.Add(this.FirstArgument);
-            this.MaximumSize = new System.Drawing.Size(297, 350);
-            this.MinimumSize = new System.Drawing.Size(297, 350);
+            this.MaximumSize = new System.Drawing.Size(297, 420);
+            this.MinimumSize = new System.Drawing.Size(297, 420);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Simple calculator";
@@ -215,6 +267,10 @@ namespace SimpleCalculator
         private Button reset;
         private Button Sin;
         private Button Squared;
+        private Button sqrt;
+        private Button Lg;
+        private Button Ln;
+        private Button Cos;
 
     }
 }
