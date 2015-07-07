@@ -17,32 +17,32 @@ namespace SimpleCalculator
             {
                 throw new Exception("Enter arguments");
             }
-            double FirstValue = Convert.ToDouble(FirstArgument.Text);
-            double SecondValue = Convert.ToDouble(SecondArgument.Text);
+            double firstValue = Convert.ToDouble(FirstArgument.Text);
+            double secondValue = Convert.ToDouble(SecondArgument.Text);
             switch (((Button)sender).Name)
             {
                 case "Division":
                     {
-                        if (SecondValue == 0)
+                        if (secondValue == 0)
                         {
                             throw new Exception("Division by zero");
                         }
-                        result = FirstValue / SecondValue;
+                        result = firstValue / secondValue;
                         break;
                     }
                 case "Addition":
                     {
-                        result = FirstValue + SecondValue;
+                        result = firstValue + secondValue;
                         break;
                     }
                 case "Multiplication":
                     {
-                        result = FirstValue * SecondValue;
+                        result = firstValue * secondValue;
                         break;
                     }
                 case "Substraction":
                     {
-                        result = FirstValue - SecondValue;
+                        result = firstValue - secondValue;
                         break;
                     }
                 default:
@@ -75,7 +75,7 @@ namespace SimpleCalculator
 
             }
             else
-                if (e.KeyChar == ',' || e.KeyChar == '.')
+                if (e.KeyChar == ',' || e.KeyChar == '.' || e.KeyChar == '-')
                 {
 
                 }
@@ -85,29 +85,33 @@ namespace SimpleCalculator
                 }
         }
 
-        private void SinClick(object sender, EventArgs e)
+        private void OperationsWithOneArgument(object sender, EventArgs e)
         {
-            double result;
             if (String.IsNullOrEmpty(FirstArgument.Text))
             {
                 throw new Exception("Enter first argument");
             }
-            double FirstValue = Convert.ToDouble(FirstArgument.Text);
-            result = Math.Sin(FirstValue);
+            double result;
+            double firstValue = Convert.ToDouble(FirstArgument.Text);
+            switch (((Button)sender).Name)
+            {
+                case "Sin":
+                    {
+                        result = Math.Sin(firstValue);
+                        break;
+                    }
+                case "Squared":
+                    {
+                        result = Math.Pow(firstValue, 2);
+                        break;
+                    }
+                default:
+                    throw new Exception("Error");
+            }
             Result.Text = result.ToString();
         }
 
-        private void SquaredClick(object sender, EventArgs e)
-        {
-            double result;
-            if (String.IsNullOrEmpty(FirstArgument.Text))
-            {
-                throw new Exception("Enter first argument");
-            }
-            double FirstValue = Convert.ToDouble(FirstArgument.Text);
-            result = Math.Pow(FirstValue, 2);
-            Result.Text = result.ToString();
-        }
+
 
 
     }

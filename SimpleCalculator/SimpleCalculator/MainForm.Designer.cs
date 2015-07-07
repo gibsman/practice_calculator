@@ -160,7 +160,7 @@ namespace SimpleCalculator
             this.Sin.TabIndex = 11;
             this.Sin.Text = "Sin";
             this.Sin.UseVisualStyleBackColor = true;
-            this.Sin.Click += new System.EventHandler(this.SinClick);
+            this.Sin.Click += new System.EventHandler(this.OperationsWithOneArgument);
             // 
             // Squared
             // 
@@ -171,7 +171,7 @@ namespace SimpleCalculator
             this.Squared.TabIndex = 12;
             this.Squared.Text = "x^2";
             this.Squared.UseVisualStyleBackColor = true;
-            this.Squared.Click += new System.EventHandler(this.SquaredClick);
+            this.Squared.Click += new System.EventHandler(this.OperationsWithOneArgument);
             // 
             // MainForm
             // 
