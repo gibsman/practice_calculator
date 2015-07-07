@@ -50,6 +50,9 @@ namespace SimpleCalculator
             this.Lg = new System.Windows.Forms.Button();
             this.Ln = new System.Windows.Forms.Button();
             this.Cos = new System.Windows.Forms.Button();
+            this.Tan = new System.Windows.Forms.Button();
+            this.Power = new System.Windows.Forms.Button();
+            this.Expanenta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // FirstArgument
@@ -82,11 +85,11 @@ namespace SimpleCalculator
             this.Addition.BackColor = System.Drawing.SystemColors.Control;
             this.Addition.Location = new System.Drawing.Point(12, 203);
             this.Addition.Name = "Addition";
-            this.Addition.Size = new System.Drawing.Size(60, 42);
+            this.Addition.Size = new System.Drawing.Size(59, 42);
             this.Addition.TabIndex = 3;
             this.Addition.Text = "+";
             this.Addition.UseVisualStyleBackColor = true;
-            this.Addition.Click += new System.EventHandler(this.Operations);
+            this.Addition.Click += new System.EventHandler(this.OperationsWithTwoAgument);
             // 
             // Substraction
             // 
@@ -96,7 +99,7 @@ namespace SimpleCalculator
             this.Substraction.TabIndex = 4;
             this.Substraction.Text = "-";
             this.Substraction.UseVisualStyleBackColor = true;
-            this.Substraction.Click += new System.EventHandler(this.Operations);
+            this.Substraction.Click += new System.EventHandler(this.OperationsWithTwoAgument);
             // 
             // Multiplication
             // 
@@ -106,7 +109,7 @@ namespace SimpleCalculator
             this.Multiplication.TabIndex = 5;
             this.Multiplication.Text = "*";
             this.Multiplication.UseVisualStyleBackColor = true;
-            this.Multiplication.Click += new System.EventHandler(this.Operations);
+            this.Multiplication.Click += new System.EventHandler(this.OperationsWithTwoAgument);
             // 
             // Division
             // 
@@ -116,7 +119,7 @@ namespace SimpleCalculator
             this.Division.TabIndex = 6;
             this.Division.Text = "/";
             this.Division.UseVisualStyleBackColor = true;
-            this.Division.Click += new System.EventHandler(this.Operations);
+            this.Division.Click += new System.EventHandler(this.OperationsWithTwoAgument);
             // 
             // label1
             // 
@@ -169,7 +172,7 @@ namespace SimpleCalculator
             // Squared
             // 
             this.Squared.BackColor = System.Drawing.SystemColors.Control;
-            this.Squared.Location = new System.Drawing.Point(12, 299);
+            this.Squared.Location = new System.Drawing.Point(77, 299);
             this.Squared.Name = "Squared";
             this.Squared.Size = new System.Drawing.Size(60, 42);
             this.Squared.TabIndex = 12;
@@ -180,7 +183,7 @@ namespace SimpleCalculator
             // Sqrt
             // 
             this.Sqrt.BackColor = System.Drawing.SystemColors.Control;
-            this.Sqrt.Location = new System.Drawing.Point(77, 299);
+            this.Sqrt.Location = new System.Drawing.Point(209, 299);
             this.Sqrt.Name = "Sqrt";
             this.Sqrt.Size = new System.Drawing.Size(60, 42);
             this.Sqrt.TabIndex = 13;
@@ -191,7 +194,7 @@ namespace SimpleCalculator
             // Lg
             // 
             this.Lg.BackColor = System.Drawing.SystemColors.Control;
-            this.Lg.Location = new System.Drawing.Point(209, 251);
+            this.Lg.Location = new System.Drawing.Point(12, 299);
             this.Lg.Name = "Lg";
             this.Lg.Size = new System.Drawing.Size(60, 42);
             this.Lg.TabIndex = 14;
@@ -202,7 +205,7 @@ namespace SimpleCalculator
             // Ln
             // 
             this.Ln.BackColor = System.Drawing.SystemColors.Control;
-            this.Ln.Location = new System.Drawing.Point(143, 251);
+            this.Ln.Location = new System.Drawing.Point(209, 251);
             this.Ln.Name = "Ln";
             this.Ln.Size = new System.Drawing.Size(60, 42);
             this.Ln.TabIndex = 15;
@@ -221,9 +224,45 @@ namespace SimpleCalculator
             this.Cos.UseVisualStyleBackColor = true;
             this.Cos.Click += new System.EventHandler(this.OperationsWithOneArgument);
             // 
+            // Tan
+            // 
+            this.Tan.BackColor = System.Drawing.SystemColors.Control;
+            this.Tan.Location = new System.Drawing.Point(143, 251);
+            this.Tan.Name = "Tan";
+            this.Tan.Size = new System.Drawing.Size(60, 42);
+            this.Tan.TabIndex = 17;
+            this.Tan.Text = "Tan";
+            this.Tan.UseVisualStyleBackColor = true;
+            this.Tan.Click += new System.EventHandler(this.OperationsWithOneArgument);
+            // 
+            // Power
+            // 
+            this.Power.BackColor = System.Drawing.SystemColors.Control;
+            this.Power.Location = new System.Drawing.Point(143, 299);
+            this.Power.Name = "Power";
+            this.Power.Size = new System.Drawing.Size(60, 42);
+            this.Power.TabIndex = 18;
+            this.Power.Text = "x^y";
+            this.Power.UseVisualStyleBackColor = true;
+            this.Power.Click += new System.EventHandler(this.OperationsWithTwoAgument);
+            // 
+            // Expanenta
+            // 
+            this.Expanenta.BackColor = System.Drawing.SystemColors.Control;
+            this.Expanenta.Location = new System.Drawing.Point(12, 347);
+            this.Expanenta.Name = "Expanenta";
+            this.Expanenta.Size = new System.Drawing.Size(60, 42);
+            this.Expanenta.TabIndex = 19;
+            this.Expanenta.Text = "Exp";
+            this.Expanenta.UseVisualStyleBackColor = true;
+            this.Expanenta.Click += new System.EventHandler(this.OperationsWithOneArgument);
+            // 
             // MainForm
             // 
-            this.ClientSize = new System.Drawing.Size(281, 382);
+            this.ClientSize = new System.Drawing.Size(281, 412);
+            this.Controls.Add(this.Expanenta);
+            this.Controls.Add(this.Power);
+            this.Controls.Add(this.Tan);
             this.Controls.Add(this.Cos);
             this.Controls.Add(this.Ln);
             this.Controls.Add(this.Lg);
@@ -241,8 +280,8 @@ namespace SimpleCalculator
             this.Controls.Add(this.Result);
             this.Controls.Add(this.SecondArgument);
             this.Controls.Add(this.FirstArgument);
-            this.MaximumSize = new System.Drawing.Size(297, 420);
-            this.MinimumSize = new System.Drawing.Size(297, 420);
+            this.MaximumSize = new System.Drawing.Size(297, 450);
+            this.MinimumSize = new System.Drawing.Size(297, 450);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Simple calculator";
@@ -271,6 +310,9 @@ namespace SimpleCalculator
         private Button Lg;
         private Button Ln;
         private Button Cos;
+        private Button Tan;
+        private Button Power;
+        private Button Expanenta;
 
     }
 }

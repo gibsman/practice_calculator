@@ -11,7 +11,7 @@ namespace SimpleCalculator
             InitializeComponent();
         }
 
-        private void Operations(object sender, EventArgs e)
+        private void OperationsWithTwoAgument(object sender, EventArgs e)
         {
             double result;
             if ((String.IsNullOrEmpty(FirstArgument.Text) || String.IsNullOrEmpty(SecondArgument.Text)))

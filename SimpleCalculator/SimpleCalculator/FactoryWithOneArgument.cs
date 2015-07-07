@@ -14,6 +14,8 @@ namespace SimpleCalculator
                 case "Ln":return new Ln();
                 case "Cos":return new Cos();
                 case "Sqrt":return new Sqrt();
+                case "Tan": return new Tan();
+                case "Expanenta": return new Expanenta();
                 default:throw new Exception("Unknown error!");
             }
         }
