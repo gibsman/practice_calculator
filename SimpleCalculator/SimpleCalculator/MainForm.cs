@@ -5,6 +5,7 @@ namespace SimpleCalculator
 {
     public partial class MainForm : Form
     {
+        public Add Add1;
         public MainForm()
         {
             InitializeComponent();
@@ -31,8 +32,8 @@ namespace SimpleCalculator
                         break;
                     }
                 case "Addition":
-                    {
-                        result = firstValue + secondValue;
+                {
+                    result=Add1.AddOperation(firstValue, secondValue);
                         break;
                     }
                 case "Multiplication":
