@@ -45,6 +45,7 @@ namespace SimpleCalculator
             this.label3 = new System.Windows.Forms.Label();
             this.reset = new System.Windows.Forms.Button();
             this.Sin = new System.Windows.Forms.Button();
+            this.Squared = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // FirstArgument
@@ -161,9 +162,21 @@ namespace SimpleCalculator
             this.Sin.UseVisualStyleBackColor = true;
             this.Sin.Click += new System.EventHandler(this.SinClick);
             // 
+            // Squared
+            // 
+            this.Squared.BackColor = System.Drawing.SystemColors.Control;
+            this.Squared.Location = new System.Drawing.Point(78, 251);
+            this.Squared.Name = "Squared";
+            this.Squared.Size = new System.Drawing.Size(60, 42);
+            this.Squared.TabIndex = 12;
+            this.Squared.Text = "x^2";
+            this.Squared.UseVisualStyleBackColor = true;
+            this.Squared.Click += new System.EventHandler(this.SquaredClick);
+            // 
             // MainForm
             // 
-            this.ClientSize = new System.Drawing.Size(281, 312);
+            this.ClientSize = new System.Drawing.Size(281, 311);
+            this.Controls.Add(this.Squared);
             this.Controls.Add(this.Sin);
             this.Controls.Add(this.reset);
             this.Controls.Add(this.label3);
@@ -201,6 +214,7 @@ namespace SimpleCalculator
         private Label label3;
         private Button reset;
         private Button Sin;
+        private Button Squared;
 
     }
 }
