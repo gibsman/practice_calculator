@@ -13,7 +13,7 @@ namespace SimpleCalculator
         private void Operations(object sender, EventArgs e)
         {
             double result;
-            if (String.IsNullOrEmpty(FirstArgument.Text) || String.IsNullOrEmpty(SecondArgument.Text))
+            if ((String.IsNullOrEmpty(FirstArgument.Text) || String.IsNullOrEmpty(SecondArgument.Text)))
             {
                 throw new Exception("Enter arguments");
             }
@@ -51,8 +51,6 @@ namespace SimpleCalculator
             Result.Text = result.ToString();
         }
 
-
-
         private void MainFormLoad(object sender, EventArgs e)
         {
 
@@ -86,6 +84,19 @@ namespace SimpleCalculator
                     e.Handled = e.KeyChar != (char)Keys.Back;
                 }
         }
+
+        private void SinClick(object sender, EventArgs e)
+        {
+            double result;
+            double FirstValue = Convert.ToDouble(FirstArgument.Text);
+            if (String.IsNullOrEmpty(FirstArgument.Text))
+            {
+                throw new Exception("Enter arguments");
+            }
+            result = Math.Sin(FirstValue);
+            Result.Text = result.ToString();
+        }
+
 
 
     }
