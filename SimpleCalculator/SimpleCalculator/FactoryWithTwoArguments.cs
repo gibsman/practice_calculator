@@ -8,11 +8,11 @@ namespace SimpleCalculator
         {
             switch (operation)
             {
-                case "Add": return new Add();
-                case "Substract": return new Substract();
-                case "Divide": return new Divide();
-                case "Multiply": return new Multiply();
-                default: throw new Exception("Unknow error!");
+                case "Addition": return new Add();
+                case "Substraction": return new Substract();
+                case "Division": return new Divide();
+                case "Multiplication": return new Multiply();
+                default: throw new Exception("Unknown error!");
             }
         }
 

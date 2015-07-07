@@ -20,36 +20,9 @@ namespace SimpleCalculator
             }
             double firstValue = Convert.ToDouble(FirstArgument.Text);
             double secondValue = Convert.ToDouble(SecondArgument.Text);
-            switch (((Button)sender).Name)
-            {
-                case "Division":
-                    {
-                        if (secondValue == 0)
-                        {
-                            throw new Exception("Division by zero");
-                        }
-                        result = firstValue / secondValue;
-                        break;
-                    }
-                case "Addition":
-                    {
-                        result = Add1.Calculate(firstValue, secondValue);
-                        break;
-                    }
-                case "Multiplication":
-                    {
-                        result = firstValue * secondValue;
-                        break;
-                    }
-                case "Substraction":
-                    {
-                        result = firstValue - secondValue;
-                        break;
-                    }
-                default:
-                    throw new Exception("Error");
-            }
-            Result.Text = result.ToString();
+            string nameButton = ((Button) sender).Name;
+            IOperationWithTwoArguments factory = FactoryWithTwoArguments.Calculate(nameButton);
+            Result.Text = factory.Calculate(firstValue,secondValue).ToString();
         }
 
         private void MainFormLoad(object sender, EventArgs e)
@@ -94,42 +67,9 @@ namespace SimpleCalculator
             }
             double result;
             double firstValue = Convert.ToDouble(FirstArgument.Text);
-            switch (((Button)sender).Name)
-            {
-                case "Sin":
-                    {
-                        result = Math.Sin(firstValue);
-                        break;
-                    }
-                case "Cos":
-                    {
-                        result = Math.Cos(firstValue);
-                        break;
-                    }
-                case "Ln":
-                    {
-                        result = Math.Log(firstValue);
-                        break;
-                    }
-                case "Lg":
-                    {
-                        result = Math.Log10(firstValue);
-                        break;
-                    }
-                case "sqrt":
-                    {
-                        result = Math.Sqrt(firstValue);
-                        break;
-                    }
-                case "Squared":
-                    {
-                        result = Math.Pow(firstValue, 2);
-                        break;
-                    }
-                default:
-                    throw new Exception("Error");
-            }
-            Result.Text = result.ToString();
+            string nameButton = ((Button)sender).Name;
+            IOperationWithOneArgument factory = FactoryWithOneArgument.Calculate(nameButton);
+            Result.Text = factory.Calculate(firstValue).ToString();
         }
 
 
