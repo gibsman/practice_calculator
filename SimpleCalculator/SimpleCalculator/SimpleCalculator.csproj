@@ -46,6 +46,8 @@
   <ItemGroup>
     <Compile Include="Add.cs" />
     <Compile Include="Divide.cs" />
+    <Compile Include="FactoryWithOneArgument.cs" />
+    <Compile Include="FactoryWithTwoArguments.cs" />
     <Compile Include="IOperationWithTwoArguments.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
