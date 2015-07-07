@@ -2,9 +2,9 @@
 
 namespace SimpleCalculator
 {
-    public class Squared
+    public class Squared : IOperationWithOneArgument
     {
-        public double SquaredOperation(double argument)
+        public double Calculate(double argument)
         {
             return Math.Pow(argument, 2);
         }

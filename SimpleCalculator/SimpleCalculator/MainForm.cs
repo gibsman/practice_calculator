@@ -33,7 +33,7 @@ namespace SimpleCalculator
                     }
                 case "Addition":
                 {
-                    result=Add1.AddOperation(firstValue, secondValue);
+                    result=Add1.Calculate(firstValue, secondValue);
                         break;
                     }
                 case "Multiplication":

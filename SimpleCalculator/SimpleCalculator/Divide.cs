@@ -1,8 +1,8 @@
 ﻿namespace SimpleCalculator
 {
-    public class Divide
+    public class Divide : IOperationWithTwoArguments
     {
-        public double DivideOperation(double firstArgument, double secondArgument)
+        public double Calculate(double firstArgument, double secondArgument)
         {
             return firstArgument / secondArgument;
         }

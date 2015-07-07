@@ -2,9 +2,9 @@
 
 namespace SimpleCalculator
 {
-    public class Sin
+    public class Sin : IOperationWithOneArgument
     {
-        public double SinOperation(double argument)
+        public double Calculate(double argument)
         {
             return Math.Sin(argument);
         }

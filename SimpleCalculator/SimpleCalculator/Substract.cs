@@ -1,8 +1,8 @@
 ﻿namespace SimpleCalculator
 {
-    public class Substract
+    public class Substract : IOperationWithTwoArguments
     {
-        public double SubstractOperation(double firstArgument, double secondArgument)
+        public double Calculate(double firstArgument, double secondArgument)
         {
             return firstArgument - secondArgument;
         }
