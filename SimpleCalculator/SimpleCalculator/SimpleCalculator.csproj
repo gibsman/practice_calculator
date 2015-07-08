@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Sorters\Bubble.cs" />
+    <Compile Include="Sorters\Bucket.cs" />
+    <Compile Include="FactorySorters.cs" />
+    <Compile Include="Sorters\Insertion.cs" />
+    <Compile Include="ISorters.cs" />
+    <Compile Include="Sorters\Selection.cs" />
     <Compile Include="TwoArguments\Add.cs" />
     <Compile Include="OneArgument\Cos.cs" />
     <Compile Include="TwoArguments\Divide.cs" />
@@ -94,6 +100,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

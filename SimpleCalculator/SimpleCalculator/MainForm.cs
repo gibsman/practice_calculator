@@ -25,6 +25,23 @@ namespace SimpleCalculator
             Result.Text = factory.Calculate(firstValue,secondValue).ToString();
         }
 
+        private void SortingMassives(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(FirstArgument.Text))
+            {
+                throw new Exception("Enter first argument");
+            }
+            string[] Split = FirstArgument.Text.Split(new Char [] {' '});
+            int[] mas = new int[Split.Length];
+            for (int i = 0; i < Split.Length; i++)
+            {
+                mas[i] = Convert.ToInt32(Split[i]);
+            }
+            string nameButton = ((Button)sender).Name;
+            ISorters factory = FactorySorters.GetSorting(nameButton);
+            Result.Text=factory.Sort(mas).ToString();
+        }
+
         private void MainFormLoad(object sender, EventArgs e)
         {
 
@@ -70,6 +87,16 @@ namespace SimpleCalculator
             string nameButton = ((Button)sender).Name;
             IOperationWithOneArgument factory = FactoryWithOneArgument.GetCalculator(nameButton);
             Result.Text = factory.Calculate(firstValue).ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
 
 
