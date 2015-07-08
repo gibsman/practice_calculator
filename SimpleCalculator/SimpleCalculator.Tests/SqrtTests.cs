@@ -1,22 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace SimpleCalculator.Tests
 {
     [TestFixture]
     class SqrtTests
     {
-        [Test]
-        public void Calculate()
+        [TestCase(100,10)]
+        [TestCase(-5,20)]
+        [TestCase(144, 10)]
+        [TestCase(100,-10)]
+
+        public void Calculate(int input,int output)
         {
-            var calculator = new SimpleCalculator.Add();
-            var testResult = calculator.Calculate(5,5);
-            var result = 10;
+            var calculator = new SimpleCalculator.Sqrt();
+            var testResult = calculator.Calculate(input);
+            var result = output;
             Assert.AreEqual(testResult,result);
         }
     }
-}
+}   
