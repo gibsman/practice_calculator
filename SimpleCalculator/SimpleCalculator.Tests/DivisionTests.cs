@@ -19,7 +19,8 @@ namespace SimpleCalculator.Tests
             var result = output;
             Assert.AreEqual(testResult, result);
         }
-         [Test]
+
+        [Test]
         [ExpectedException(typeof(Exception))]
         public void DivisionByZeroTests()
         {

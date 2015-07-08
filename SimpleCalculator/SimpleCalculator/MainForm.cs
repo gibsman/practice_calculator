@@ -21,8 +21,8 @@ namespace SimpleCalculator
             double firstValue = Convert.ToDouble(FirstArgument.Text);
             double secondValue = Convert.ToDouble(SecondArgument.Text);
             string nameButton = ((Button) sender).Name;
-            IOperationWithTwoArguments factory = FactoryWithTwoArguments.GetCalculator(nameButton);
-            Result.Text = factory.Calculate(firstValue,secondValue).ToString();
+            IOperationWithTwoArguments Factory = FactoryWithTwoArguments.GetCalculator(nameButton);
+            Result.Text = Factory.Calculate(firstValue,secondValue).ToString();
         }
 
         private void SortingMassives(object sender, EventArgs e)
@@ -38,8 +38,14 @@ namespace SimpleCalculator
                 mas[i] = Convert.ToInt32(Split[i]);
             }
             string nameButton = ((Button)sender).Name;
-            ISorters factory = FactorySorters.GetSorting(nameButton);
-            Result.Text=factory.Sort(mas).ToString();
+            ISorters Factory = FactorySorters.GetSorting(nameButton);
+            int[] massive = Factory.Sort(mas);
+            string result="";
+            for (int j = 0; j < massive.Length; j++)
+            {
+                result += Convert.ToString(massive[j]+" ");
+            }
+            Result.Text = result;
         }
 
         private void MainFormLoad(object sender, EventArgs e)
@@ -66,7 +72,7 @@ namespace SimpleCalculator
 
             }
             else
-                if (e.KeyChar == ',' || e.KeyChar == '.' || e.KeyChar == '-')
+                if (e.KeyChar == ' ' || e.KeyChar == '.' || e.KeyChar == '-')
                 {
 
                 }
@@ -85,8 +91,8 @@ namespace SimpleCalculator
             double result;
             double firstValue = Convert.ToDouble(FirstArgument.Text);
             string nameButton = ((Button)sender).Name;
-            IOperationWithOneArgument factory = FactoryWithOneArgument.GetCalculator(nameButton);
-            Result.Text = factory.Calculate(firstValue).ToString();
+            IOperationWithOneArgument Factory = FactoryWithOneArgument.GetCalculator(nameButton);
+            Result.Text = Factory.Calculate(firstValue).ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
