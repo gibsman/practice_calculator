@@ -1,10 +1,19 @@
-﻿namespace SimpleCalculator
+﻿using System;
+
+namespace SimpleCalculator
 {
     public class Divide : IOperationWithTwoArguments
     {
         public double Calculate(double firstArgument, double secondArgument)
         {
-            return firstArgument / secondArgument;
+            if (secondArgument == 0)
+            {
+                throw new Exception("Division by zero");
+            }
+            else
+            {
+                return firstArgument / secondArgument;
+            }
         }
     }
 }

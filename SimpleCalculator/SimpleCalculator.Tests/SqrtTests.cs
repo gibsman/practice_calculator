@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 
 namespace SimpleCalculator.Tests
 {
@@ -6,7 +7,6 @@ namespace SimpleCalculator.Tests
     class SqrtTests
     {
         [TestCase(100,10)]
-        [TestCase(-5,20)]
         [TestCase(144, 10)]
         [TestCase(100,-10)]
 
@@ -16,6 +16,14 @@ namespace SimpleCalculator.Tests
             var testResult = calculator.Calculate(input);
             var result = output;
             Assert.AreEqual(testResult,result);
+        }
+
+        [Test]
+        [ExpectedException(typeof(Exception))]
+        public void NegativeSqrtTests()
+        {
+            var calculator = new Sqrt();
+            var result = calculator.Calculate(-4);
         }
     }
 }   
