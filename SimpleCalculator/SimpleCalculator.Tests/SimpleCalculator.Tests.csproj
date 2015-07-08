@@ -42,10 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcosTests.cs" />
     <Compile Include="AddTests.cs" />
+    <Compile Include="AsinTests.cs" />
     <Compile Include="CosTests.cs" />
     <Compile Include="ExpanentaTests.cs" />
+    <Compile Include="InverseValueTests.cs" />
     <Compile Include="LgTests.cs" />
+    <Compile Include="ModuleTests.cs" />
     <Compile Include="SinTests.cs" />
     <Compile Include="SubstractTests.cs" />
     <Compile Include="SquaredTests.cs" />

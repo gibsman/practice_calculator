@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OneArgument\Acos.cs" />
+    <Compile Include="OneArgument\Asin.cs" />
+    <Compile Include="OneArgument\Module.cs" />
     <Compile Include="Sorters\Bubble.cs" />
     <Compile Include="Sorters\Bucket.cs" />
     <Compile Include="FactorySorters.cs" />
@@ -52,6 +55,7 @@
     <Compile Include="Sorters\Selection.cs" />
     <Compile Include="TwoArguments\Add.cs" />
     <Compile Include="OneArgument\Cos.cs" />
+    <Compile Include="OneArgument\InverseValue.cs" />
     <Compile Include="TwoArguments\Divide.cs" />
     <Compile Include="OneArgument\Expanenta.cs" />
     <Compile Include="FactoryWithOneArgument.cs" />

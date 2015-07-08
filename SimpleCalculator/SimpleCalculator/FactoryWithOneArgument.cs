@@ -22,8 +22,16 @@ namespace SimpleCalculator
                     return new Sqrt();
                 case "Tan":
                     return new Tan();
-                case "Expanenta": 
+                case "InverseValue":
+                    return new InverseValue();
+                case "Expanenta":
                     return new Expanenta();
+                case "Module":
+                    return new Module();
+                case "Asin":
+                    return new Asin();
+                case "Acos":
+                    return new Acos();
                 default:throw new Exception("Unknown error!");
             }
         }

@@ -72,7 +72,7 @@ namespace SimpleCalculator
 
             }
             else
-                if (e.KeyChar == ' ' || e.KeyChar == '.' || e.KeyChar == '-')
+                if (e.KeyChar == ' ' || e.KeyChar == ',' || e.KeyChar == '-')
                 {
 
                 }
