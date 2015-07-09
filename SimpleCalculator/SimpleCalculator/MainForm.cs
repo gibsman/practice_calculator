@@ -14,16 +14,15 @@ namespace SimpleCalculator
 
         private void OperationsWithTwoAgument(object sender, EventArgs e)
         {
-            double result;
             if ((String.IsNullOrEmpty(FirstArgument.Text) || String.IsNullOrEmpty(SecondArgument.Text)))
             {
                 throw new Exception("Enter arguments");
             }
             double firstValue = Convert.ToDouble(FirstArgument.Text);
             double secondValue = Convert.ToDouble(SecondArgument.Text);
-            string nameButton = ((Button) sender).Name;
-            IOperationWithTwoArguments Factory = FactoryWithTwoArguments.GetCalculator(nameButton);
-            Result.Text = Factory.Calculate(firstValue,secondValue).ToString();
+            string nameButton = ((Button)sender).Name;
+            IOperationWithTwoArguments calculator = FactoryWithTwoArguments.GetCalculator(nameButton);
+            Result.Text = calculator.Calculate(firstValue, secondValue).ToString();
         }
 
         private void SortingMassives(object sender, EventArgs e)
@@ -32,19 +31,19 @@ namespace SimpleCalculator
             {
                 throw new Exception("Enter first argument");
             }
-            string[] Split = FirstArgument.Text.Split(new Char [] {' '});
-            int[] mas = new int[Split.Length];
-            for (int i = 0; i < Split.Length; i++)
+            string[] split = FirstArgument.Text.Split(' ');
+            int[] mas = new int[split.Length];
+            for (int i = 0; i < split.Length; i++)
             {
-                mas[i] = Convert.ToInt32(Split[i]);
+                mas[i] = Convert.ToInt32(split[i]);
             }
             string nameButton = ((Button)sender).Name;
-            ISorters Factory = FactorySorters.GetSorting(nameButton);
-            int[] massive = Factory.Sort(mas);
-            string result="";
+            ISorters sorter = FactorySorters.GetSorting(nameButton);
+            int[] massive = sorter.Sort(mas);
+            string result = "";
             for (int j = 0; j < massive.Length; j++)
             {
-                result += Convert.ToString(massive[j]+" ");
+                result += Convert.ToString(massive[j] + " ");
             }
             Result.Text = result;
         }
@@ -54,16 +53,11 @@ namespace SimpleCalculator
 
         }
 
-        private void resetClick(object sender, EventArgs e)
+        private void ResetClick(object sender, EventArgs e)
         {
             FirstArgument.Text = "";
             SecondArgument.Text = "";
             Result.Text = "";
-        }
-
-        private void ResultTextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void FirstArgumentKeyPress(object sender, KeyPressEventArgs e)
@@ -92,23 +86,8 @@ namespace SimpleCalculator
             double result;
             double firstValue = Convert.ToDouble(FirstArgument.Text);
             string nameButton = ((Button)sender).Name;
-            IOperationWithOneArgument Factory = FactoryWithOneArgument.GetCalculator(nameButton);
-            Result.Text = Factory.Calculate(firstValue).ToString();
+            IOperationWithOneArgument calculator = FactoryWithOneArgument.GetCalculator(nameButton);
+            Result.Text = calculator.Calculate(firstValue).ToString();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-
-
     }
 }

@@ -86,7 +86,6 @@ namespace SimpleCalculator
             this.Result.ReadOnly = true;
             this.Result.Size = new System.Drawing.Size(269, 20);
             this.Result.TabIndex = 2;
-            this.Result.TextChanged += new System.EventHandler(this.ResultTextChanged);
             // 
             // Addition
             // 
@@ -164,7 +163,7 @@ namespace SimpleCalculator
             this.reset.TabIndex = 10;
             this.reset.Text = "Reset";
             this.reset.UseVisualStyleBackColor = true;
-            this.reset.Click += new System.EventHandler(this.resetClick);
+            this.reset.Click += new System.EventHandler(this.ResetClick);
             // 
             // Sin
             // 
