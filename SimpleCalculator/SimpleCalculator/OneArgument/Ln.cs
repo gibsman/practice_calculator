@@ -2,8 +2,16 @@
 
 namespace SimpleCalculator.OneArgument
 {
+    /// <summary>
+    /// Calculates Ln
+    /// </summary>
     public class Ln : IOperationWithOneArgument
     {
+        /// <summary>
+        /// Method that calculates Ln
+        /// </summary>
+        /// <param name="argument"></param>
+        /// <returns></returns>
         public double Calculate(double argument)
         {
             if (argument <= 0)

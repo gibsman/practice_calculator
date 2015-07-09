@@ -2,8 +2,16 @@
 
 namespace SimpleCalculator.OneArgument
 {
+    /// <summary>
+    /// Calculates Sqrt
+    /// </summary>
     public class Sqrt : IOperationWithOneArgument
     {
+        /// <summary>
+        /// Method that calculates Sqrt
+        /// </summary>
+        /// <param name="argument"></param>
+        /// <returns></returns>
         public double Calculate(double argument)
         {
             if (argument <= 0)
