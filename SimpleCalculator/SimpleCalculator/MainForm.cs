@@ -6,20 +6,20 @@ namespace SimpleCalculator
 {
     public partial class MainForm : Form
     {
-        public Add Add1;
         public MainForm()
         {
             InitializeComponent();
         }
-
+        
         private void OperationsWithTwoAgument(object sender, EventArgs e)
         {
+            ValidateNumbers validation=new ValidateNumbers();
             if ((String.IsNullOrEmpty(FirstArgument.Text) || String.IsNullOrEmpty(SecondArgument.Text)))
             {
                 throw new Exception("Enter arguments");
             }
-            double firstValue = Convert.ToDouble(FirstArgument.Text);
-            double secondValue = Convert.ToDouble(SecondArgument.Text);
+            double firstValue = validation.ValidateAndConvert(FirstArgument.Text);
+            double secondValue = validation.ValidateAndConvert(SecondArgument.Text);
             string nameButton = ((Button)sender).Name;
             IOperationWithTwoArguments calculator = FactoryWithTwoArguments.GetCalculator(nameButton);
             Result.Text = calculator.Calculate(firstValue, secondValue).ToString();
@@ -31,12 +31,8 @@ namespace SimpleCalculator
             {
                 throw new Exception("Enter first argument");
             }
-            string[] split = FirstArgument.Text.Split(' ');
-            int[] mas = new int[split.Length];
-            for (int i = 0; i < split.Length; i++)
-            {
-                mas[i] = Convert.ToInt32(split[i]);
-            }
+            ValidateMassives validation=new ValidateMassives();
+            int[] mas = validation.ValidateAndConvert(FirstArgument.Text);
             string nameButton = ((Button)sender).Name;
             ISorters sorter = FactorySorters.GetSorting(nameButton);
             int[] massive = sorter.Sort(mas);
@@ -60,31 +56,14 @@ namespace SimpleCalculator
             Result.Text = "";
         }
 
-        private void FirstArgumentKeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsNumber(e.KeyChar))
-            {
-
-            }
-            else
-                if (e.KeyChar == ' ' || e.KeyChar == ',' || e.KeyChar == '-')
-                {
-
-                }
-                else
-                {
-                    e.Handled = e.KeyChar != (char)Keys.Back;
-                }
-        }
-
         private void OperationsWithOneArgument(object sender, EventArgs e)
         {
+            ValidateNumbers validation = new ValidateNumbers();
             if (String.IsNullOrEmpty(FirstArgument.Text))
             {
                 throw new Exception("Enter first argument");
             }
-            double result;
-            double firstValue = Convert.ToDouble(FirstArgument.Text);
+            double firstValue = validation.ValidateAndConvert(FirstArgument.Text);
             string nameButton = ((Button)sender).Name;
             IOperationWithOneArgument calculator = FactoryWithOneArgument.GetCalculator(nameButton);
             Result.Text = calculator.Calculate(firstValue).ToString();

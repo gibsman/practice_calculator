@@ -70,7 +70,6 @@ namespace SimpleCalculator
             this.FirstArgument.Name = "FirstArgument";
             this.FirstArgument.Size = new System.Drawing.Size(269, 20);
             this.FirstArgument.TabIndex = 0;
-            this.FirstArgument.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FirstArgumentKeyPress);
             // 
             // SecondArgument
             // 
