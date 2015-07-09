@@ -2,15 +2,15 @@
 
 namespace SimpleCalculator
 {
-    public class ValidateMassives
+    public static class ValidateMassives
     {
-        public int[] ValidateAndConvert(string input)
+        public static int[] ValidateAndConvert(string input)
         {
-            int element;
             string[] splittedString = input.Split(' ');
             int[] mas = new int[splittedString.Length];
             for (int i = 0; i < splittedString.Length; i++)
             {
+                int element;
                 if (int.TryParse(splittedString[i], out element) == false)
                 {
                     throw new Exception("Unexpected symbol in input area");

@@ -2,9 +2,9 @@
 
 namespace SimpleCalculator
 {
-    public class ValidateNumbers
+    public static class ValidateNumbers
     {
-        public double ValidateAndConvert(string input)
+        public static double ValidateAndConvert(string input)
         {
             double output;
             if (double.TryParse(input, out output)==false)

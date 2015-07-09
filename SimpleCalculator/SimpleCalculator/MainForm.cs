@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using SimpleCalculator.TwoArguments;
 
 namespace SimpleCalculator
 {
@@ -13,13 +12,12 @@ namespace SimpleCalculator
         
         private void OperationsWithTwoAgument(object sender, EventArgs e)
         {
-            ValidateNumbers validation=new ValidateNumbers();
             if ((String.IsNullOrEmpty(FirstArgument.Text) || String.IsNullOrEmpty(SecondArgument.Text)))
             {
                 throw new Exception("Enter arguments");
             }
-            double firstValue = validation.ValidateAndConvert(FirstArgument.Text);
-            double secondValue = validation.ValidateAndConvert(SecondArgument.Text);
+            double firstValue = ValidateNumbers.ValidateAndConvert(FirstArgument.Text);
+            double secondValue = ValidateNumbers.ValidateAndConvert(SecondArgument.Text);
             string nameButton = ((Button)sender).Name;
             IOperationWithTwoArguments calculator = FactoryWithTwoArguments.GetCalculator(nameButton);
             Result.Text = calculator.Calculate(firstValue, secondValue).ToString();
@@ -31,8 +29,7 @@ namespace SimpleCalculator
             {
                 throw new Exception("Enter first argument");
             }
-            ValidateMassives validation=new ValidateMassives();
-            int[] mas = validation.ValidateAndConvert(FirstArgument.Text);
+            int[] mas = ValidateMassives.ValidateAndConvert(FirstArgument.Text);
             string nameButton = ((Button)sender).Name;
             ISorters sorter = FactorySorters.GetSorting(nameButton);
             int[] massive = sorter.Sort(mas);
@@ -58,12 +55,11 @@ namespace SimpleCalculator
 
         private void OperationsWithOneArgument(object sender, EventArgs e)
         {
-            ValidateNumbers validation = new ValidateNumbers();
             if (String.IsNullOrEmpty(FirstArgument.Text))
             {
                 throw new Exception("Enter first argument");
             }
-            double firstValue = validation.ValidateAndConvert(FirstArgument.Text);
+            double firstValue = ValidateNumbers.ValidateAndConvert(FirstArgument.Text);
             string nameButton = ((Button)sender).Name;
             IOperationWithOneArgument calculator = FactoryWithOneArgument.GetCalculator(nameButton);
             Result.Text = calculator.Calculate(firstValue).ToString();
