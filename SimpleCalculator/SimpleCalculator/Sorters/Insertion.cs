@@ -1,7 +1,15 @@
 ﻿namespace SimpleCalculator.Sorters
 {
+    /// <summary>
+    /// Insertion sorting
+    /// </summary>
     public class Insertion : ISorters
     {
+        /// <summary>
+        /// Method that describes insertion sorting
+        /// </summary>
+        /// <param name="items"></param>
+        /// <returns></returns>
         public int[] Sort(int[] items)
         {
             int[] result = new int[items.Length];

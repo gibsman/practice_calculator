@@ -95,7 +95,7 @@ namespace SimpleCalculator
             this.Addition.TabIndex = 3;
             this.Addition.Text = "+";
             this.Addition.UseVisualStyleBackColor = true;
-            this.Addition.Click += new System.EventHandler(this.OperationsWithTwoAgument);
+            this.Addition.Click += new System.EventHandler(this.OperationsWithTwoAguments);
             // 
             // Substraction
             // 
@@ -105,7 +105,7 @@ namespace SimpleCalculator
             this.Substraction.TabIndex = 4;
             this.Substraction.Text = "-";
             this.Substraction.UseVisualStyleBackColor = true;
-            this.Substraction.Click += new System.EventHandler(this.OperationsWithTwoAgument);
+            this.Substraction.Click += new System.EventHandler(this.OperationsWithTwoAguments);
             // 
             // Multiplication
             // 
@@ -115,7 +115,7 @@ namespace SimpleCalculator
             this.Multiplication.TabIndex = 5;
             this.Multiplication.Text = "*";
             this.Multiplication.UseVisualStyleBackColor = true;
-            this.Multiplication.Click += new System.EventHandler(this.OperationsWithTwoAgument);
+            this.Multiplication.Click += new System.EventHandler(this.OperationsWithTwoAguments);
             // 
             // Division
             // 
@@ -125,7 +125,7 @@ namespace SimpleCalculator
             this.Division.TabIndex = 6;
             this.Division.Text = "/";
             this.Division.UseVisualStyleBackColor = true;
-            this.Division.Click += new System.EventHandler(this.OperationsWithTwoAgument);
+            this.Division.Click += new System.EventHandler(this.OperationsWithTwoAguments);
             // 
             // label1
             // 
@@ -250,7 +250,7 @@ namespace SimpleCalculator
             this.Power.TabIndex = 18;
             this.Power.Text = "x^y";
             this.Power.UseVisualStyleBackColor = true;
-            this.Power.Click += new System.EventHandler(this.OperationsWithTwoAgument);
+            this.Power.Click += new System.EventHandler(this.OperationsWithTwoAguments);
             // 
             // Expanenta
             // 

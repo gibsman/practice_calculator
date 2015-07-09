@@ -3,8 +3,16 @@ using SimpleCalculator.OneArgument;
 
 namespace SimpleCalculator
 {
-    public  static class FactoryWithOneArgument
+    /// <summary>
+    /// Factory that calculates operations with one argument
+    /// </summary>
+    public static class FactoryWithOneArgument
     {
+        /// <summary>
+        /// Method that uses factory for calculations with one argument
+        /// </summary>
+        /// <param name="operation"></param>
+        /// <returns></returns>
         public static IOperationWithOneArgument GetCalculator(string operation)
         {
             switch (operation)

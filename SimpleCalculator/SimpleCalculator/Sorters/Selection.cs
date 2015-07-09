@@ -1,15 +1,22 @@
 ﻿namespace SimpleCalculator.Sorters
 {
+    /// <summary>
+    /// Selection sorting
+    /// </summary>
     public class Selection : ISorters
     {
+        /// <summary>
+        /// Method that describes selection sorting
+        /// </summary>
+        /// <param name="items"></param>
+        /// <returns></returns>
         public int[] Sort(int[] items)
         {
-            int min, temp;
             int length = items.Length;
 
             for (int i = 0; i < length - 1; i++)
             {
-                min = i;
+                var min = i;
 
                 for (int j = i + 1; j < length; j++)
                 {
@@ -21,7 +28,7 @@
 
                 if (min != i)
                 {
-                    temp = items[i];
+                    var temp = items[i];
                     items[i] = items[min];
                     items[min] = temp;
                 }

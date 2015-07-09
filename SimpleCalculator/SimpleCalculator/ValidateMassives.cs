@@ -2,8 +2,16 @@
 
 namespace SimpleCalculator
 {
+    /// <summary>
+    /// Validation of input text and converting that text into massives
+    /// </summary>
     public static class ValidateMassives
     {
+        /// <summary>
+        /// Method that validates text and converts it into massives
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public static int[] ValidateAndConvert(string input)
         {
             string[] splittedString = input.Split(' ');

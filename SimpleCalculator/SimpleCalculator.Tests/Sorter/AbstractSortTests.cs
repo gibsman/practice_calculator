@@ -17,7 +17,7 @@ namespace SimpleCalculator.Tests.Sorter
         public void Calculate(int[] argument, int[] result)
         {
             var testResult = Sorter.Sort(argument);
-            Assert.AreEqual(result,testResult);
+            Assert.AreEqual(testResult,result);
         }
     }
 }

@@ -6,7 +6,7 @@ namespace SimpleCalculator
     static class Program
     {
         /// <summary>
-        /// Главная точка входа для приложения.
+        /// Main point of insertion.
         /// </summary>
         [STAThread]
         static void Main()

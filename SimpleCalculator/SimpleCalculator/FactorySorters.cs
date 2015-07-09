@@ -3,8 +3,16 @@ using SimpleCalculator.Sorters;
 
 namespace SimpleCalculator
 {
+    /// <summary>
+    /// Factory that sorts massives
+    /// </summary>
     public static class FactorySorters
     {
+        /// <summary>
+        /// Method that uses factory for sorting massives
+        /// </summary>
+        /// <param name="operation"></param>
+        /// <returns></returns>
         public static ISorters GetSorting(string operation)
         {
             switch (operation)

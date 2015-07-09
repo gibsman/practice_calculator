@@ -1,7 +1,15 @@
 ﻿namespace SimpleCalculator.Sorters
 {
+    /// <summary>
+    /// Bubble sorting
+    /// </summary>
     public class Bubble : ISorters
     {
+        /// <summary>
+        /// Method that describes bubble sorting
+        /// </summary>
+        /// <param name="items"></param>
+        /// <returns></returns>
         public int[] Sort(int[] items)
         {
             for (int i = 0; i < items.Length; i++)

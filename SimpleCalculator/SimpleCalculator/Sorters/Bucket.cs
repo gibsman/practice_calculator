@@ -2,8 +2,16 @@
 
 namespace SimpleCalculator.Sorters
 {
+    /// <summary>
+    /// Bucket sorting
+    /// </summary>
     public class Bucket : ISorters
     {
+        /// <summary>
+        /// Method that describes bucket sorting
+        /// </summary>
+        /// <param name="items"></param>
+        /// <returns></returns>
         public int[] Sort(int[] items)
         {
             int maxValue = items[0];
