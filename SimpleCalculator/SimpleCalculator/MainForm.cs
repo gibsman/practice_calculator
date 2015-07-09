@@ -15,7 +15,7 @@ namespace SimpleCalculator
         {
             InitializeComponent();
         }
-        
+
         /// <summary>
         /// Method that calculates operations with two arguments
         /// </summary>
@@ -23,15 +23,18 @@ namespace SimpleCalculator
         /// <param name="e"></param>
         private void OperationsWithTwoAguments(object sender, EventArgs e)
         {
-            if ((String.IsNullOrEmpty(FirstArgument.Text) || String.IsNullOrEmpty(SecondArgument.Text)))
+            try
             {
-                throw new Exception("Enter arguments");
+                double firstValue = ValidateNumbers.ValidateAndConvert(FirstArgument.Text);
+                double secondValue = ValidateNumbers.ValidateAndConvert(SecondArgument.Text);
+                string nameButton = ((Button)sender).Name;
+                IOperationWithTwoArguments calculator = FactoryWithTwoArguments.GetCalculator(nameButton);
+                Result.Text = calculator.Calculate(firstValue, secondValue).ToString();
             }
-            double firstValue = ValidateNumbers.ValidateAndConvert(FirstArgument.Text);
-            double secondValue = ValidateNumbers.ValidateAndConvert(SecondArgument.Text);
-            string nameButton = ((Button)sender).Name;
-            IOperationWithTwoArguments calculator = FactoryWithTwoArguments.GetCalculator(nameButton);
-            Result.Text = calculator.Calculate(firstValue, secondValue).ToString();
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         /// <summary>
@@ -41,20 +44,24 @@ namespace SimpleCalculator
         /// <param name="e"></param>
         private void SortingMassives(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(FirstArgument.Text))
+            try
             {
-                throw new Exception("Enter first argument");
+                int[] mas = ValidateMassives.ValidateAndConvert(FirstArgument.Text);
+                string nameButton = ((Button)sender).Name;
+                ISorters sorter = FactorySorters.GetSorting(nameButton);
+                int[] massive = sorter.Sort(mas);
+                string result = "";
+                for (int j = 0; j < massive.Length; j++)
+                {
+                    result += Convert.ToString(massive[j] + " ");
+                }
+                Result.Text = result;
             }
-            int[] mas = ValidateMassives.ValidateAndConvert(FirstArgument.Text);
-            string nameButton = ((Button)sender).Name;
-            ISorters sorter = FactorySorters.GetSorting(nameButton);
-            int[] massive = sorter.Sort(mas);
-            string result = "";
-            for (int j = 0; j < massive.Length; j++)
+            catch (Exception exception)
             {
-                result += Convert.ToString(massive[j] + " ");
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            Result.Text = result;
+
         }
 
         /// <summary>
@@ -85,14 +92,17 @@ namespace SimpleCalculator
         /// <param name="e"></param>
         private void OperationsWithOneArgument(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(FirstArgument.Text))
+            try
             {
-                throw new Exception("Enter first argument");
+                double firstValue = ValidateNumbers.ValidateAndConvert(FirstArgument.Text);
+                string nameButton = ((Button)sender).Name;
+                IOperationWithOneArgument calculator = FactoryWithOneArgument.GetCalculator(nameButton);
+                Result.Text = calculator.Calculate(firstValue).ToString();
             }
-            double firstValue = ValidateNumbers.ValidateAndConvert(FirstArgument.Text);
-            string nameButton = ((Button)sender).Name;
-            IOperationWithOneArgument calculator = FactoryWithOneArgument.GetCalculator(nameButton);
-            Result.Text = calculator.Calculate(firstValue).ToString();
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
