@@ -42,11 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OneArgumentFactoryTests.cs" />
     <Compile Include="Sorter\AbstractSortTests.cs" />
     <Compile Include="OneArgument\AcosTests.cs" />
     <Compile Include="Sorter\BucketSortTests.cs" />
     <Compile Include="Sorter\InsertionSortTests.cs" />
     <Compile Include="Sorter\SelectionSortTests.cs" />
+    <Compile Include="TwoArgumentsFactoryTests.cs" />
     <Compile Include="TwoArguments\AddTests.cs" />
     <Compile Include="OneArgument\AsinTests.cs" />
     <Compile Include="Sorter\BubbleSortTests.cs" />
