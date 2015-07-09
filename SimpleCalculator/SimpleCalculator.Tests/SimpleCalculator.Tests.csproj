@@ -42,24 +42,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AcosTests.cs" />
-    <Compile Include="AddTests.cs" />
-    <Compile Include="AsinTests.cs" />
-    <Compile Include="CosTests.cs" />
-    <Compile Include="ExpanentaTests.cs" />
-    <Compile Include="InverseValueTests.cs" />
-    <Compile Include="LgTests.cs" />
-    <Compile Include="ModuleTests.cs" />
-    <Compile Include="SinTests.cs" />
-    <Compile Include="SubstractTests.cs" />
-    <Compile Include="SquaredTests.cs" />
-    <Compile Include="DivisionTests.cs" />
-    <Compile Include="LnTests.cs" />
-    <Compile Include="MultiplicationTests.cs" />
-    <Compile Include="PowerTests.cs" />
+    <Compile Include="Sorter\AbstractSortTests.cs" />
+    <Compile Include="OneArgument\AcosTests.cs" />
+    <Compile Include="Sorter\BucketSortTests.cs" />
+    <Compile Include="Sorter\InsertionSortTests.cs" />
+    <Compile Include="Sorter\SelectionSortTests.cs" />
+    <Compile Include="TwoArguments\AddTests.cs" />
+    <Compile Include="OneArgument\AsinTests.cs" />
+    <Compile Include="Sorter\BubbleSortTests.cs" />
+    <Compile Include="OneArgument\CosTests.cs" />
+    <Compile Include="OneArgument\ExpanentaTests.cs" />
+    <Compile Include="OneArgument\InverseValueTests.cs" />
+    <Compile Include="OneArgument\LgTests.cs" />
+    <Compile Include="OneArgument\ModuleTests.cs" />
+    <Compile Include="OneArgument\SinTests.cs" />
+    <Compile Include="TwoArguments\SubstractTests.cs" />
+    <Compile Include="OneArgument\SquaredTests.cs" />
+    <Compile Include="TwoArguments\DivisionTests.cs" />
+    <Compile Include="OneArgument\LnTests.cs" />
+    <Compile Include="TwoArguments\MultiplicationTests.cs" />
+    <Compile Include="TwoArguments\PowerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SqrtTests.cs" />
-    <Compile Include="TanTests.cs" />
+    <Compile Include="OneArgument\SqrtTests.cs" />
+    <Compile Include="OneArgument\TanTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
