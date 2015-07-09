@@ -294,7 +294,7 @@ namespace SimpleCalculator
             this.Bubble.TabIndex = 23;
             this.Bubble.Text = "BubbleSort";
             this.Bubble.UseVisualStyleBackColor = true;
-            this.Bubble.Click += new System.EventHandler(this.SortingMassives);
+            this.Bubble.Click += new System.EventHandler(this.Sortingarrays);
             // 
             // Selection
             // 
@@ -305,7 +305,7 @@ namespace SimpleCalculator
             this.Selection.TabIndex = 24;
             this.Selection.Text = "SelectionSort";
             this.Selection.UseVisualStyleBackColor = true;
-            this.Selection.Click += new System.EventHandler(this.SortingMassives);
+            this.Selection.Click += new System.EventHandler(this.Sortingarrays);
             // 
             // Bucket
             // 
@@ -316,7 +316,7 @@ namespace SimpleCalculator
             this.Bucket.TabIndex = 25;
             this.Bucket.Text = "BucketSort";
             this.Bucket.UseVisualStyleBackColor = true;
-            this.Bucket.Click += new System.EventHandler(this.SortingMassives);
+            this.Bucket.Click += new System.EventHandler(this.Sortingarrays);
             // 
             // Insertion
             // 
@@ -327,7 +327,7 @@ namespace SimpleCalculator
             this.Insertion.TabIndex = 26;
             this.Insertion.Text = "InsertionSort";
             this.Insertion.UseVisualStyleBackColor = true;
-            this.Insertion.Click += new System.EventHandler(this.SortingMassives);
+            this.Insertion.Click += new System.EventHandler(this.Sortingarrays);
             // 
             // Acos
             // 

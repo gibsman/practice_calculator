@@ -3,13 +3,13 @@
 namespace SimpleCalculator.Tests.Sorter
 {
     /// <summary>
-    /// Class that unites all tests with sorting massives
+    /// Class that unites all tests with sorting arrays
     /// </summary>
     [TestFixture]
     class AbstractSortTests
     {
         /// <summary>
-        /// Method that unites all tests with sorting massives
+        /// Method that unites all tests with sorting arrays
         /// </summary>
         protected ISorters Sorter;
 

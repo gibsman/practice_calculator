@@ -38,22 +38,22 @@ namespace SimpleCalculator
         }
 
         /// <summary>
-        /// Method that sorts massives
+        /// Method that sorts arrays
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void SortingMassives(object sender, EventArgs e)
+        private void Sortingarrays(object sender, EventArgs e)
         {
             try
             {
-                int[] mas = ValidateMassives.ValidateAndConvert(FirstArgument.Text);
+                int[] mas = Validatearrays.ValidateAndConvert(FirstArgument.Text);
                 string nameButton = ((Button)sender).Name;
                 ISorters sorter = FactorySorters.GetSorting(nameButton);
-                int[] massive = sorter.Sort(mas);
+                int[] array = sorter.Sort(mas);
                 string result = "";
-                for (int j = 0; j < massive.Length; j++)
+                for (int j = 0; j < array.Length; j++)
                 {
-                    result += Convert.ToString(massive[j] + " ");
+                    result += Convert.ToString(array[j] + " ");
                 }
                 Result.Text = result;
             }

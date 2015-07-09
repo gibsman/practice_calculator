@@ -17,7 +17,7 @@ namespace SimpleCalculator.OneArgument
 
             if (argument > 1 || argument < -1)
             {
-                throw new Exception("The area define");
+                throw new Exception("Please enter arguments from -1 to 1");
             }
             else
             {

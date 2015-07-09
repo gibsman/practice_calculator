@@ -3,12 +3,12 @@
 namespace SimpleCalculator
 {
     /// <summary>
-    /// Validation of input text and converting that text into massives
+    /// Validation of input text and converting that text into arrays
     /// </summary>
-    public static class ValidateMassives
+    public static class Validatearrays
     {
         /// <summary>
-        /// Method that validates text and converts it into massives
+        /// Method that validates text and converts it into arrays
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>

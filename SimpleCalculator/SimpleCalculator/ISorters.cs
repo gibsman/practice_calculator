@@ -1,7 +1,7 @@
 ﻿namespace SimpleCalculator
 {
     /// <summary>
-    /// Interface for sorting massives
+    /// Interface for sorting arrays
     /// </summary>
     public interface ISorters
     {

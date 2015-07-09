@@ -4,12 +4,12 @@ using SimpleCalculator.Sorters;
 namespace SimpleCalculator
 {
     /// <summary>
-    /// Factory that sorts massives
+    /// Factory that sorts arrays
     /// </summary>
     public static class FactorySorters
     {
         /// <summary>
-        /// Method that uses factory for sorting massives
+        /// Method that uses factory for sorting arrays
         /// </summary>
         /// <param name="operation"></param>
         /// <returns></returns>
