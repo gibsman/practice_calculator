@@ -1,7 +1,6 @@
 ﻿using System;
-using SimpleCalculator;
 
-namespace SimpleCalculator
+namespace SimpleCalculator.OneArgument
 {
     public class Lg : IOperationWithOneArgument
     {

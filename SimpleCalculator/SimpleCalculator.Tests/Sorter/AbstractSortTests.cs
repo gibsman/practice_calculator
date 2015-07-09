@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace SimpleCalculator.Tests
+namespace SimpleCalculator.Tests.Sorter
 {
     [TestFixture]
     class AbstractSortTests

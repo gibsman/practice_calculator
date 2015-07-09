@@ -1,4 +1,5 @@
 ﻿using System;
+using SimpleCalculator.OneArgument;
 
 namespace SimpleCalculator
 {

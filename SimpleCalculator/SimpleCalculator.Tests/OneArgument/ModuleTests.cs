@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
+using SimpleCalculator.OneArgument;
 
-namespace SimpleCalculator.Tests
+namespace SimpleCalculator.Tests.OneArgument
 {
     [TestFixture]
     class ModuleTests
@@ -13,7 +14,7 @@ namespace SimpleCalculator.Tests
 
         public void Calculate(double input, double output)
         {
-            var calculator = new SimpleCalculator.Module();
+            var calculator = new Module();
             var testResult = calculator.Calculate(input);
             var result = output;
             Assert.AreEqual(testResult, result);

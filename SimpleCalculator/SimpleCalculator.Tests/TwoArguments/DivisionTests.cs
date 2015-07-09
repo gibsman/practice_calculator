@@ -1,7 +1,8 @@
 ﻿using System;
 using NUnit.Framework;
+using SimpleCalculator.TwoArguments;
 
-namespace SimpleCalculator.Tests
+namespace SimpleCalculator.Tests.TwoArguments
 {
     [TestFixture]
     class DivisionTests
@@ -14,7 +15,7 @@ namespace SimpleCalculator.Tests
 
         public void Calculate(double firstInput, double secondInput, double output)
         {
-            var calculator = new SimpleCalculator.Divide();
+            var calculator = new Divide();
             var testResult = calculator.Calculate(firstInput, secondInput);
             var result = output;
             Assert.AreEqual(testResult, result);

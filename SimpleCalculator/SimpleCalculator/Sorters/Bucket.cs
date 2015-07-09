@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SimpleCalculator
+namespace SimpleCalculator.Sorters
 {
     public class Bucket : ISorters
     {

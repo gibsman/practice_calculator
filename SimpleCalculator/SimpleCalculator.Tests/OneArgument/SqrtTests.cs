@@ -1,7 +1,8 @@
 ﻿using System;
 using NUnit.Framework;
+using SimpleCalculator.OneArgument;
 
-namespace SimpleCalculator.Tests
+namespace SimpleCalculator.Tests.OneArgument
 {
     [TestFixture]
     class SqrtTests
@@ -12,7 +13,7 @@ namespace SimpleCalculator.Tests
 
         public void Calculate(int input,int output)
         {
-            var calculator = new SimpleCalculator.Sqrt();
+            var calculator = new Sqrt();
             var testResult = calculator.Calculate(input);
             var result = output;
             Assert.AreEqual(testResult,result);

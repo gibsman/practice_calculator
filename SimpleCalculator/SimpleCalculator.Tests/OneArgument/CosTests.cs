@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
+using SimpleCalculator.OneArgument;
 
-namespace SimpleCalculator.Tests
+namespace SimpleCalculator.Tests.OneArgument
 {
     [TestFixture]
     class CosTests
@@ -13,7 +14,7 @@ namespace SimpleCalculator.Tests
 
         public void Calculate(double input, double output)
         {
-            var calculator = new SimpleCalculator.Cos();
+            var calculator = new Cos();
             var testResult = calculator.Calculate(input);
             var result = output;
             Assert.AreEqual(testResult, result, 0.1);

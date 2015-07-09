@@ -1,7 +1,8 @@
 ﻿using System;
 using NUnit.Framework;
+using SimpleCalculator.OneArgument;
 
-namespace SimpleCalculator.Tests
+namespace SimpleCalculator.Tests.OneArgument
 {
     [TestFixture]
     class InverseValueTests
@@ -13,7 +14,7 @@ namespace SimpleCalculator.Tests
 
         public void Calculate(double input, double output)
         {
-            var calculator = new SimpleCalculator.InverseValue();
+            var calculator = new InverseValue();
             var testResult = calculator.Calculate(input);
             var result = output;
             Assert.AreEqual(testResult, result);

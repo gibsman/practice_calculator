@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SimpleCalculator
+namespace SimpleCalculator.TwoArguments
 {
     public class Power : IOperationWithTwoArguments
     {

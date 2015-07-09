@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
+using SimpleCalculator.TwoArguments;
 
-namespace SimpleCalculator.Tests
+namespace SimpleCalculator.Tests.TwoArguments
 {
     [TestFixture]
     class SubstractTests
@@ -12,7 +13,7 @@ namespace SimpleCalculator.Tests
 
         public void Calculate(double firstInput, double secondInput, double output)
         {
-            var calculator = new SimpleCalculator.Substract();
+            var calculator = new Substract();
             var testResult = calculator.Calculate(firstInput, secondInput);
             var result = output;
             Assert.AreEqual(testResult, result);

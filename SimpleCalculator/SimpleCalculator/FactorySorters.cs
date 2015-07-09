@@ -1,4 +1,5 @@
 ﻿using System;
+using SimpleCalculator.Sorters;
 
 namespace SimpleCalculator
 {

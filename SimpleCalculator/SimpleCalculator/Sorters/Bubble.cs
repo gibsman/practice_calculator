@@ -1,4 +1,4 @@
-﻿namespace SimpleCalculator
+﻿namespace SimpleCalculator.Sorters
 {
     public class Bubble : ISorters
     {

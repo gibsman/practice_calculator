@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
+using SimpleCalculator.Sorters;
 
-namespace SimpleCalculator.Tests
+namespace SimpleCalculator.Tests.Sorter
 {
     class InsertionSortTests : AbstractSortTests
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SimpleCalculator
+namespace SimpleCalculator.OneArgument
 {
     public class Asin : IOperationWithOneArgument
     {
