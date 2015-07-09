@@ -3,10 +3,18 @@ using NUnit.Framework;
 using SimpleCalculator.OneArgument;
 
 namespace SimpleCalculator.Tests
-{
+{ 
+    /// <summary>
+    /// Tests factory with one argument
+    /// </summary>
     [TestFixture]
     public class OneArgumentsFactoryTests
     {
+        /// <summary>
+        /// Method that tests factory with one argument
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="name"></param>
         [TestCase(typeof(Sin), "Sin")]
         [TestCase(typeof(Cos), "Cos")]
         [TestCase(typeof(Tan), "Tan")]

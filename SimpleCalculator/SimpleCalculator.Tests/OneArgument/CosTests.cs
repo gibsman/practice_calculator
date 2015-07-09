@@ -3,9 +3,17 @@ using SimpleCalculator.OneArgument;
 
 namespace SimpleCalculator.Tests.OneArgument
 {
+    /// <summary>
+    /// Tests cos
+    /// </summary>
     [TestFixture]
     class CosTests
     {
+        /// <summary>
+        /// Method that tests cos
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="output"></param>
         [TestCase(0, 1)]
         [TestCase(1.56, 0)]
         [TestCase(3.14, -0.9)]

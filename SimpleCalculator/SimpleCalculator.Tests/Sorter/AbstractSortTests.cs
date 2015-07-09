@@ -2,9 +2,15 @@
 
 namespace SimpleCalculator.Tests.Sorter
 {
+    /// <summary>
+    /// Class that unites all tests with sorting massives
+    /// </summary>
     [TestFixture]
     class AbstractSortTests
     {
+        /// <summary>
+        /// Method that unites all tests with sorting massives
+        /// </summary>
         protected ISorters Sorter;
 
         [TestCase(new[] {12, 5, 1, 6}, new[] {1, 5, 6, 12})]

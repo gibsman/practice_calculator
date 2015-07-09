@@ -3,9 +3,17 @@ using SimpleCalculator.TwoArguments;
 
 namespace SimpleCalculator.Tests.TwoArguments
 {
+    /// <summary>
+    /// Tests substraction
+    /// </summary>
     [TestFixture]
     class SubstractTests
     {
+        /// <summary>
+        /// Method that tests substraction
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="output"></param>
         [TestCase(40, 10, 30)]
         [TestCase(-10, 10, -20)]
         [TestCase(-5, -45, -50)]

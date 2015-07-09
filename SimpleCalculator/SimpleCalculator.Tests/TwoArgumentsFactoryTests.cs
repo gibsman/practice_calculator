@@ -4,9 +4,17 @@ using SimpleCalculator.TwoArguments;
 
 namespace SimpleCalculator.Tests
 {
+    /// <summary>
+    /// Tests factory with two argument
+    /// </summary>
     [TestFixture]
     public class TwoArgumentsFactoryTests
     {
+        /// <summary>
+        /// Method that tests factory with two argument
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="name"></param>
         [TestCase(typeof(Add), "Addition")]
         [TestCase(typeof(Divide), "Division")]
         [TestCase(typeof(Substract), "Substraction")]

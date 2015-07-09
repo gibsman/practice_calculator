@@ -3,9 +3,17 @@ using SimpleCalculator.TwoArguments;
 
 namespace SimpleCalculator.Tests.TwoArguments
 {
+    /// <summary>
+    /// Tests power
+    /// </summary>
     [TestFixture]
     class PowerTests
     {
+        /// <summary>
+        /// Method that tests power
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="output"></param>
         [TestCase(1, 2, 1)]
         [TestCase(-5, 3, -125)]
         [TestCase(2, 2, 4)]

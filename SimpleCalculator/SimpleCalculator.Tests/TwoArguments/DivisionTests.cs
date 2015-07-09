@@ -4,9 +4,17 @@ using SimpleCalculator.TwoArguments;
 
 namespace SimpleCalculator.Tests.TwoArguments
 {
+    /// <summary>
+    /// Tests divivsion
+    /// </summary>
     [TestFixture]
     class DivisionTests
     {
+        /// <summary>
+        /// Method that tests divivsion
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="output"></param>
         [TestCase(100,10, 10)]
         [TestCase(-5,10, 0.5)]
         [TestCase(256,16, 15)]
@@ -20,6 +28,9 @@ namespace SimpleCalculator.Tests.TwoArguments
             var result = output;
             Assert.AreEqual(testResult, result);
         }
+        /// <summary>
+        /// Method that elicits negative arguments and gives exception in return
+        /// </summary>
 
         [Test]
         [ExpectedException(typeof(Exception))]

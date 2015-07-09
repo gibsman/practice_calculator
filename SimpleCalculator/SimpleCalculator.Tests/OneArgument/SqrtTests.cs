@@ -4,9 +4,17 @@ using SimpleCalculator.OneArgument;
 
 namespace SimpleCalculator.Tests.OneArgument
 {
+    /// <summary>
+    /// Tests sqrt
+    /// </summary>
     [TestFixture]
     class SqrtTests
     {
+        /// <summary>
+        /// Method that tests sqrt
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="output"></param>
         [TestCase(100,10)]
         [TestCase(144, 10)]
         [TestCase(100,-10)]
@@ -19,6 +27,9 @@ namespace SimpleCalculator.Tests.OneArgument
             Assert.AreEqual(testResult,result);
         }
 
+        /// <summary>
+        /// Method that elicits negative arguments and gives exception in return
+        /// </summary>
         [Test]
         [ExpectedException(typeof(Exception))]
         public void NegativeSqrtTests()

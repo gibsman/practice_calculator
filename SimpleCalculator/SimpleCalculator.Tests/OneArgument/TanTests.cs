@@ -3,9 +3,17 @@ using SimpleCalculator.OneArgument;
 
 namespace SimpleCalculator.Tests.OneArgument
 {
+    /// <summary>
+    /// Tests tan
+    /// </summary>
     [TestFixture]
     class TanTests
     {
+        /// <summary>
+        /// Method that tests tan
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="output"></param>
         [TestCase(0, 0)]
         [TestCase(1, 1.5)]
         [TestCase(-1, 1.5)]
